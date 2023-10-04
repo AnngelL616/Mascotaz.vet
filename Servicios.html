@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+    <script src="js/validacionServicio.js"></script>
 </head>
 
 <body>
@@ -139,7 +140,7 @@
                 <option value="Otro">Otro</option>
             </select>
 
-            <label for="Plan">Plan:</label>
+            <label for="tipoPlan">Plan:</label>
             <select id="tipoPlan">
                 <option value="Dorado">Perro</option>
                 <option value="Platino">Gato</option>
@@ -158,6 +159,9 @@
         function calcularCosto() {
             var tipoMascota = document.getElementById("tipoMascota").value;
             var nombrePlan = document.getElementById("tipoPlan").value;
+            switch(tipoPlan){
+
+            }
             var pesoAproximado = parseFloat(document.getElementById("pesoAproximado").value);
 
             // Definir los costos base en un objeto JavaScript (puedes usar el mismo objeto del ejemplo anterior)
