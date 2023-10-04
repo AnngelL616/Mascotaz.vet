@@ -1,47 +1,72 @@
 function calcularCosto() {
     var tipoMascota = document.getElementById("tipoMascota").value;
-    var nombrePlan = document.getElementById("tipoPlan").value;
     var pesoAproximado = parseFloat(document.getElementById("pesoAproximado").value);
-    
-    // Definir costos base en un objeto
-    var costosBase = {
-        "Perro": {
-            "Plan Dorado Colectivo": 50,
-            "Plan Platino Individual": 60,
-            "Plan Veterinario Eutanasia": 70,
-            "Plan Huerfanos": 80
-        },
-        "Gato": {
-            "Plan Básico": 40,
-            "Plan Intermedio": 60,
-            "Plan Premium": 80
-        },
-        "Otro": {
-            "Plan Básico": 30,
-            "Plan Intermedio": 50,
-            "Plan Premium": 70
-        }
+
+    // Definir costos base para el Plan Platino y Plan Dorado
+    var costoPlanPlatino = {
+        "0-10": 360000,
+        "10-20": 420000,
+        "20-30": 480000,
+        "30-40": 540000,
+        "40+": 600000
     };
 
-    // Verificar si el tipo de mascota y el plan existen en el objeto de costos base
-    if (costosBase.hasOwnProperty(tipoMascota) && costosBase[tipoMascota].hasOwnProperty(nombrePlan)) {
-        var costoBase = costosBase[tipoMascota][nombrePlan];
-        var costoTotal = costoBase + (pesoAproximado * 2);
+    var costoPlanDorado = {
+        "0-10": 130000,
+        "10-20": 150000,
+        "20-30": 170000,
+        "30-40": 210000,
+        "40-50": 260000,
+        "50+": 320000
+    };
 
-        // Mostrar el resultado de la cotización en un elemento HTML con el id "resultadoCotizacion"
-        var resultadoCotizacionDiv = document.getElementById("resultadoCotizacion");
-        resultadoCotizacionDiv.innerHTML = "Cotización para " + nombrePlan + " de " + tipoMascota + ":<br>" +
-            "Costo base del plan: $" + costoBase + "<br>" +
-            "Costo adicional por peso: $" + (pesoAproximado * 2) + "<br>" +
-            "Costo total: $" + costoTotal;
+    // Calcular el costo basado en el tipo de mascota y el peso aproximado
+    var costoTotal;
+    if (tipoMascota === "Perro") {
+        var rango = obtenerRangoPeso(pesoAproximado);
+        costoTotal = calcularCostoPorRango(costoPlanPlatino, costoPlanDorado, rango);
+    } else if (tipoMascota === "Gato") {
+        // Implementar costos para gatos si es necesario
+        var rango = obtenerRangoPeso(pesoAproximado);
+        costoTotal = calcularCostoPorRango(costoPlanPlatino, costoPlanDorado, rango);
+    } else if (tipoMascota === "Otro") {
+        // Implementar costos para otros tipos de mascotas si es necesario
+        var rango = obtenerRangoPeso(pesoAproximado);
+        costoTotal = calcularCostoPorRango(costoPlanPlatino, costoPlanDorado, rango);
     } else {
-        // Manejar el caso en que el tipo de mascota o el plan no sean válidos
-        alert("Tipo de mascota o plan no válidos. Por favor, elija opciones válidas.");
+        // Tipo de mascota no válido
+        alert("Tipo de mascota no válido. Por favor, elija opciones válidas.");
+        return;
     }
 
-    // Aquí puedes realizar el segundo cálculo y mostrarlo en otro elemento HTML
-    // Por ejemplo, puedes realizar el cálculo y mostrarlo en un elemento con el id "resultadoSegundoCalculo"
-    var resultadoSegundoCalculo = "El segundo cálculo es $50"; // Reemplaza esto con el resultado real
-    var resultadoSegundoCalculoDiv = document.getElementById("resultadoSegundoCalculo");
-    resultadoSegundoCalculoDiv.innerHTML = resultadoSegundoCalculo;
+    // Mostrar el resultado
+    var resultadoCotizacionDiv = document.getElementById("resultadoCotizacion");
+    resultadoCotizacionDiv.innerHTML = "Cotización para " + tipoMascota + ": $" + costoTotal.toFixed(2);
+}
+
+// Función para obtener el rango de peso
+function obtenerRangoPeso(peso) {
+    if (peso <= 10) {
+        return "0-10";
+    } else if (peso <= 20) {
+        return "10-20";
+    } else if (peso <= 30) {
+        return "20-30";
+    } else if (peso <= 40) {
+        return "30-40";
+    } else {
+        return "50+";
+    }
+}
+
+// Función para calcular el costo basado en el rango de peso y los costos de Platino y Dorado
+function calcularCostoPorRango(costoPlatino, costoDorado, rango) {
+    var costoPlatinoPlan = costoPlatino[rango];
+    var costoDoradoPlan = costoDorado[rango];
+
+    // Aquí puedes aplicar tu lógica para elegir entre los planes Platino y Dorado según algún criterio
+    // En este ejemplo, simplemente se elige el más económico
+    var costoElegido = Math.min(costoPlatinoPlan, costoDoradoPlan);
+
+    return costoElegido;
 }
