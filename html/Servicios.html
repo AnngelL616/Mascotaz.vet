@@ -129,45 +129,29 @@
     <footer>
         <p>Derechos de autor © 2023. Todos los derechos reservados</p>
     </footer>
-    Public Class CotizacionMascotasForm
-    Private Sub CalcularButton_Click(sender As Object, e As EventArgs) Handles CalcularButton.Click
-    ' Definir los costos base para cada tipo de mascota y plan en un diccionario
-    Dim costosBase As New Dictionary(Of String, Dictionary(Of String, Decimal)) From {
-    {"Perro", New Dictionary(Of String, Decimal) From {
-    {"Plan Dorado Colectivo", 50},
-    {"Plan Platino Individual", 60},
-    {"Plan Veterinario Eutanasia", 70}
-    {"Plan Huerfanos", 80}
-    }},
-    {"Gato", New Dictionary(Of String, Decimal) From {
-    {"Plan Básico", 40},
-    {"Plan Intermedio", 60},
-    {"Plan Premium", 80}
-    }},
-    {"Otro", New Dictionary(Of String, Decimal) From {
-    {"Plan Básico", 30},
-    {"Plan Intermedio", 50},
-    {"Plan Premium", 70}
-    }}
-    }
+    <section class="Cotizacion">
+        <h2>Cotización de Seguro para Mascotas</h2>
+        <form id="cotizacionForm">
+            <label for="tipoMascota">Tipo de Mascota:</label>
+            <select id="tipoMascota">
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Otro">Otro</option>
+            </select>
 
-    ' Obtener la selección del usuario
-    Dim tipoMascota As String = TipoMascotaComboBox.SelectedItem.ToString()
-    Dim pesoAproximado As Decimal = Decimal.Parse(PesoTextBox.Text)
-    Dim nombrePlan As String = NombrePlanTextBox.Text
+            <label for="nombrePlan">Nombre del Plan:</label>
+            <input type="text" id="nombrePlan" />
 
-    ' Calcular el costo del plan
-    Dim costoBase As Decimal = costosBase(tipoMascota)(nombrePlan)
-    Dim costoTotal As Decimal = costoBase + (pesoAproximado * 2)
+            <label for="pesoAproximado">Peso Aproximado (kg):</label>
+            <input type="number" id="pesoAproximado" />
 
-    ' Mostrar el resultado
-    ResultadoLabel.Text = $"Cotización para {nombrePlan} de {tipoMascota}:"
-    CostoBaseLabel.Text = $"Costo base del plan: ${costoBase}"
-    CostoPesoLabel.Text = $"Costo adicional por peso: ${pesoAproximado * 2}"
-    CostoTotalLabel.Text = $"Costo total: ${costoTotal}"
-    End Sub
-    End Class
+            <button type="button" onclick="calcularCosto()">Calcular</button>
+        </form>
 
+        <div id="resultadoCotizacion">
+            <!-- Aquí sse mostrarán los resultados de la cotización -->
+        </div>
+    </section>
 </body>
 
 </html>
