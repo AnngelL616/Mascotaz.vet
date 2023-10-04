@@ -140,7 +140,7 @@
             </select>
 
             <label for="Plan">Plan:</label>
-            <select id="tipo_plan">
+            <select id="tipoPlan">
                 <option value="Dorado">Perro</option>
                 <option value="Platino">Gato</option>
             </select>
@@ -157,7 +157,7 @@
     <script>
         function calcularCosto() {
             var tipoMascota = document.getElementById("tipoMascota").value;
-            var nombrePlan = document.getElementById("nombrePlan").value;
+            var nombrePlan = document.getElementById("tipoPlan").value;
             var pesoAproximado = parseFloat(document.getElementById("pesoAproximado").value);
 
             // Definir los costos base en un objeto JavaScript (puedes usar el mismo objeto del ejemplo anterior)
