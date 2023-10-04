@@ -152,25 +152,25 @@
             <button type="button" onclick="calcularCosto()">Calcular</button>
         </form>
         <div id="resultadoCotizacion">
+            <script>
+                // Función para calcular el costo y mostrar el resultado
+                function calcularCosto() {
+                    // Realiza el cálculo aquí y guarda el resultado en una variable
+                    var resultado = "El costo es $100"; // Reemplaza esto con el resultado real
+            
+                    // Obtén el elemento div con el id "resultadoCotizacion"
+                    var resultadoDiv = document.getElementById("resultadoCotizacion");
+            
+                    // Asigna el resultado como contenido del div
+                    resultadoDiv.innerHTML = resultado;
+                }
+            </script> 
             <!-- Aquí sse mostrarán los resultados de la cotización -->
         </div>
     </section>
-    <script>
-        function calcularCosto() {
-            var tipoMascota = document.getElementById("tipoMascota").value;
-            var nombrePlan = document.getElementById("tipoPlan").value;
-            switch(tipoPlan){
-
-            }
-            var pesoAproximado = parseFloat(document.getElementById("pesoAproximado").value);
-
-            // Definir los costos base en un objeto JavaScript (puedes usar el mismo objeto del ejemplo anterior)
-
-            // Calcular el costo del plan y mostrar los resultados
-            // (debes implementar esta lógica aquí, similar a la versión anterior)
-            // Luego, muestra los resultados en el div "resultadoCotizacion"
-        }
-    </script>
+   
+        
+  
 </body>
 
 </html>
