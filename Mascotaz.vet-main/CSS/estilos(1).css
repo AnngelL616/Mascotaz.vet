@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #5b7e88;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor {
+    background: #257BA7;
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.superior {
+    padding: 10px auto;
+}
+
+.opciones {
+    overflow: hidden;
+    background: #abb6b9;
+}
+
+.opciones li {
+    float: left;
+    list-style: none;
+    /*elimina la viñeta*/
+}
+
+.opciones li {
+    padding: 10px 60px;
+    color: #000000;
+    text-decoration: none;
+    /*elimina el subrayado*/
+    display: block;
+    font-weight: bold;
+}
+
+.opciones li :hover {
+    background: #257BA7;
+    color: #d1cfcf;
+    text-decoration: none;
+    /*elimina el subrayado*/
+    display: block;
+}
+.medio{
+padding: 15px;
+}
+.titulo{
+text-align: center;
+color: #973636;
+}
+.frases{
+    text-align: center;
+    padding: 15px 20px;
+    font-size: italic;
+color: #d0c7c7;
+}
+
+.servicio{
+    width: 380px;
+}
+.servicio:hover{
+    transform: rotateZ(360deg);
+    transition: all 5s;
+}
+.cajas{
+overflow: hidden;
+}
+.izquierda,.centro,.derecha{
+float: left;
+margin: 10px;
+}
+.subtiulo{
+    text-align: center;
+    padding: 12px 0;
+}
+.pie{
+background: 50px 100px;
+}
+.derechos{
+    color: #000000;
+    padding: 0 0 0 30px;
+    font-size: 50px;
+}

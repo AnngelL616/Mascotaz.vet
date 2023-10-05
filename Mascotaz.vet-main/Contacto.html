@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/EstilosContacto.css">
+    <title>Contacto - Mascotaz.Vet</title>
+    <link rel="shortvut icon" href="imagenes/Logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Titulo">
+        <img src="imagenes/Logo.jpeg" alt="" width="10%">
+        <div class="Texto">
+            <h1>MASCOTAZ.VET</h1>
+        </div>
+        <img src="imagenes/Logo.jpeg" alt="" width="10%">
+    </div>
+    <nav>
+        <ul class="opciones">
+            <li><a href="Inicio.html">INICIO</a></li>
+            <li><a href="Nosotros.html">NOSOTROS</a></li>
+            <li><a href="Servicios.html">SERVICIOS</a></li>
+            <li><a href="UrnaRecordatorio.html">URNAS Y RECORDARTORIOS</a></li>
+            <li><a href="Contacto.html">CONTACTO</a></li>
+            <a class="WhatsMenu" href="https://web.whatsapp.com/" target="_blank">
+                <center><img src="imagenes/WhatsR.png" alt="" width="4%">
+            </a></center>
+
+
+
+        </ul>
+
+    </nav>
+    <main>
+        <section>
+            </nav>
+            <main>
+                <section>
+                    <h2>Contactanos</h2>
+                    <article>
+                        <a href="https://web.whatsapp.com/" target="_blank">
+                            <img src="imagenes/Whats.png" alt="" width="3%">
+                            <h3>Whatsapp</h3>
+                        </a>
+                        <p>3112345678</p>
+                    </article>
+                </section>
+            </main>
+            <article>
+                <a href="https://www.instagram.com/Mascotaz.vet/" target="_blank">
+                    <img src="imagenes/Insta.png" alt="" width="3%">
+                    <h3>Instagram</h3>
+                </a>
+            </article>
+        </section>
+        <aside>
+            <form action="ValidaciónContacto.js" method="get">
+                <center><label for="Nuestro equipo atenderá todas tus solicitudes">Nuestro equipo atenderá todas tus
+                        solicitudes</label></center>
+                <fieldset>
+                    <legend>Tus datos</legend>
+                    <div class="Formulario">
+                        <div>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="Nombre" id="Nombre" size="40" required pattern="[A-Za-z\s]+">
+                            <label for="nombre">Apellido:</label>
+                            <input type="text" name="Apellido" id="Apellido" size="40" required pattern="[A-Za-z\s]+">
+                        </div>
+                        <div>
+                            <label for="Email">Email:</label>
+                            <input type="email" name="Email">
+                        </div>
+                        <div>
+                            <label for="nombre">Celular:</label>
+                            <input type="text" name="nombre" id="nombre" size="40" required pattern="[A-Za-z\s]+">
+                        </div>
+                    </div>
+                </fieldset>
+                <div>
+                    <center><label for="Conocer Mascota">Queremos conocer sobre tu mascota</label></center>
+                </div>
+                <fieldset>
+                    <legend>Información General</legend>
+                    <div>
+                        <label for="Nombre Mascota">Nombre de tu Mascota</label>
+                        <input type="text" name="NombreMasc" id="NombreMasc" size="40" required pattern="[A-Za-z\s]+">
+                        <label for="Raza">Raza</label>
+                        <input type="text" name="Raza" id="Raza" size="40" required pattern="[A-Za-z\s]+">
+                    </div>
+                    <div>
+                        <label for="Peso">Peso/Kg</label>
+                        <input type="text" name="Peso" id="Peso" size="4" required pattern="+">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>¿En que plan estas interesado?</legend>
+                    <div>
+                        <input type="checkbox">
+                        <label for="Plan Dorado">Plan Dorado "Colectivo"</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="Plan Platino">Plan Platino "Individual"</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="Plan Huerfanos">Plan Huerfanos</label>
+                    </div>
+                </fieldset>
+                <fieldset class="MensajeFormulario">
+                    <legend>Mensaje/Asunto/Solicitud</legend>
+                    <div>
+
+                        <center><textarea rows="5" cols="50"></textarea></center>
+
+                    </div>
+                </fieldset>
+                <div>
+                    <center>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                    </center>
+                </div>
+            </form>
+
+        </aside>
+    </main>
+    <footer>
+        <p>Derechos de autor © 2023. Todos los derechos reservados</p>
+    </footer>
+    <script src="js/ValidacionContacto.js"></script>
+</body>
+
+</html>

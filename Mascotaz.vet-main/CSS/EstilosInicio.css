@@ -1,0 +1,77 @@
+body,h1,h2,h3,p,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Kalam', cursive;
+    line-height: 1.5;
+}
+.Titulo{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    color: rgb(26, 183, 193);
+}
+.Texto{
+    padding-left: 450px;
+    padding-right: 450px;
+}
+.WhatsMenu{
+    justify-content: center;
+    align-items: center;
+
+}
+nav{
+    font-size: 20px;
+    overflow:hidden;
+    background-color:rgb(103, 114, 114)
+}
+nav li {
+    float: left;
+    list-style: none;
+}
+nav li a{
+    padding: 30px 50px;
+    color: white;
+    text-decoration: none; /*elimina el subrayado*/
+    display: block;
+    font-weight: bold; /*grosor de fuente, en este caos negrilla*/
+}   
+nav li a:hover{
+    background-color: rgb(26, 183, 193); 
+    color: whitesmoke;
+    text-decoration: none; 
+    display: block;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+section{
+    flex: 10px;
+    padding: 20px;
+    background-color: rgb(126, 208, 214);
+    color: white;
+}
+article{
+    margin-bottom:20px ;
+    padding: 10px;
+    border: 1px solid rgb(103, 114, 114);
+    background-color: white;
+    color: black;
+}
+aside{
+
+flex: 1;
+    padding: 20px;
+    background-color: rgb(103, 114, 114);
+    color: whitesmoke
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(26, 183, 193);
+    color: whitesmoke;
+}
