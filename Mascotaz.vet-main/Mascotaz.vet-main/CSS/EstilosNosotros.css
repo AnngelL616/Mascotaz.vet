@@ -51,7 +51,7 @@ main{
 }
 section{
     flex: 10px;
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(126, 208, 214);
     color: white;
 }
@@ -63,19 +63,17 @@ article{
     color: black;
 }
 aside{
-flex: 1;
-    padding: 20px;
+
+flex: 2;
+    padding: 30px;
     background-color: rgb(103, 114, 114);
     color: whitesmoke
 }
-.Formulario{
-    display: inline-flexbox;
+fieldset{
+    border-radius: 10px;
 }
-.Box{
-    font-display: flex;
-}
-.MensajeFormulario{
-    text-align: center;
+.radio-container {
+    display: flex;
 }
 footer{
     text-align: center;

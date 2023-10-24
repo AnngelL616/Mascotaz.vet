@@ -1,83 +1,115 @@
-body,h1,h2,h3,p,ul,li{
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: 'Kalam', cursive;
     line-height: 1.5;
 }
-.Titulo{ 
+
+.Titulo {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:white;
+    background-color: white;
     color: rgb(26, 183, 193);
 }
-.Texto{
+
+.Texto {
     padding-left: 450px;
     padding-right: 450px;
 }
-.WhatsMenu{
+
+.WhatsMenu {
     justify-content: center;
     align-items: center;
 
 }
-nav{
+
+nav {
     font-size: 20px;
-    overflow:hidden;
-    background-color:rgb(103, 114, 114)
+    overflow: hidden;
+    background-color: rgb(103, 114, 114)
 }
+
 nav li {
     float: left;
     list-style: none;
 }
-nav li a{
+
+nav li a {
     padding: 30px 50px;
     color: white;
-    text-decoration: none; /*elimina el subrayado*/
+    text-decoration: none;
+    /*elimina el subrayado*/
     display: block;
-    font-weight: bold; /*grosor de fuente, en este caos negrilla*/
-}   
-nav li a:hover{
-    background-color: rgb(26, 183, 193); 
+    font-weight: bold;
+    /*grosor de fuente, en este caos negrilla*/
+}
+
+nav li a:hover {
+    background-color: rgb(26, 183, 193);
     color: whitesmoke;
-    text-decoration: none; 
+    text-decoration: none;
     display: block;
 }
-main{
+
+main {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
-section{
+
+section {
     flex: 10px;
     padding: 10px;
     background-color: rgb(126, 208, 214);
     color: white;
 }
-article{
-    margin-bottom:20px ;
+
+article {
+    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid rgb(103, 114, 114);
     background-color: white;
     color: black;
 }
-aside{
-flex: 1;
+
+aside {
+    flex: 1;
     padding: 20px;
     background-color: rgb(103, 114, 114);
     color: whitesmoke
 }
-.Formulario{
+
+.Formulario {
     display: inline-flexbox;
+
+    input:invalid {
+        border: 2px dashed red;
+    }
+
+    input:valid {
+        border: 2px solid black;
+    }
 }
-.Box{
+
+.Box {
     font-display: flex;
 }
-.MensajeFormulario{
+
+.MensajeFormulario {
     text-align: center;
 }
-footer{
+
+footer {
     text-align: center;
     padding: 10px;
     background-color: rgb(26, 183, 193);

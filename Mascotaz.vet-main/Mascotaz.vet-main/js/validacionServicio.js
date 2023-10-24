@@ -65,7 +65,7 @@ function calcularCostoPorRango(costoPlatino, costoDorado, rango) {
     var costoDoradoPlan = costoDorado[rango];
 
     // Aquí puedes aplicar tu lógica para elegir entre los planes Platino y Dorado según algún criterio
-    // En este ejemplo, simplemente se elige el más económico
+    
     var costoElegido = Math.min(costoPlatinoPlan, costoDoradoPlan);
 
     return costoElegido;
