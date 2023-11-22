@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/EstiloServicio.css">
+    <title>Servicios - Mascotaz.Vet</title>
+    <link rel="shortvut icon" href="imagenes/Logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+    <div class="Titulo">
+        <img src="imagenes/Logo.jpeg" alt="" width="10%">
+        <div class="Texto">
+            <h1>MASCOTAZ.VET</h1>
+        </div>
+        <img src="imagenes/Logo.jpeg" alt="" width="10%">
+    </div>
+    <nav>
+        <ul class="opciones">
+            <li><a href="Inicio.html">INICIO</a></li>
+            <li><a href="Nosotros.html">NOSOTROS</a></li>
+            <li><a href="Servicios.html">SERVICIOS</a></li>
+            <li><a href="UrnaRecordatorio.html">URNAS Y RECORDARTORIOS</a></li>
+            <li><a href="Contacto.html">CONTACTO</a></li>
+            <a class="WhatsMenu" href="https://web.whatsapp.com/" target="_blank">
+                <center><img src="imagenes/WhatsR.png" alt="" width="4%">
+            </a></center>
+
+            
+
+        </ul>
+
+    </nav>
+    <section class="Tablas">
+        <table>
+            <tr>
+                <td class="imagen-celda"><img src="imagenes/s1.png" alt="" width="50%"></td>
+                <td class="imagen-celda"><img src="imagenes/s2.png" alt="" width="50%"></td>
+                <td class="imagen-celda"><img src="imagenes/s3.png" alt="" width="50%"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h2>Plan Dorado Colectivo</h2>
+                </td>
+                <td>
+                    <h2>Plan Platino Individual</h2>
+                </td>
+                <td>
+                    <h2>Plan Veterinario Eutanasia</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Este plan incluye:
+
+                        Traslado del cuerpo de la mascota (casa o veterinaria)
+                        en Bogotá,fuera de Bogotá tiene un costo adicional.
+
+                        Congelación del cuerpo para frenar la descomposición
+
+                        Entrega certificado de cremación y oración a los animales
+
+                        Cremación de las mascotas con otras mascotas
+
+                        Baulito recordatorio
+
+                        Factura del servicio</p>
+                </td>
+                <td>
+                    <p>Este plan incluye:
+
+                        Traslado del cuerpo de la mascota (casa o veterinaria) en Bogotá, fuera de Bogotá tiene un costo
+                        adicional
+
+                        Congelación del cuerpo para frenar la descomposición
+
+                        Certificado de cremación por hidrólisis alcalina
+
+                        Entrega de los restos cálcicos en una urna cenizaria personalizada
+
+                        Video de ingreso del cuerpo al horno
+
+                        Baulito personalizado y foto recordatorio
+
+                        Factura del servicio</p>
+                </td>
+                <td>
+                    <p>Sabemos lo difícil que es tomar la decisión para evitar y prolongar el dolor de tu peludito.
+
+                        En nuestro equipo de trabajo tenemos médicos veterinarios profesionales certificados.
+
+                        La eutanasia para tu peludito se realiza a domicilio
+
+                        Aplica de 7 am a 7 pm
+                        en Bogotá
+                    </p>
+                </td>
+                <td>
+                    <p>Sabemos lo difícil que es tomar la decisión para evitar y prolongar el dolor de tu peludito.
+
+                        En nuestro equipo de trabajo tenemos médicos veterinarios profesionales certificados.
+
+                        La eutanasia para tu peludito se realiza a domicilio
+
+                        Aplica de 7 am a 7 pm
+                        en Bogotá
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+
+        <h2>Cotización de Seguro para Mascotas</h2>
+        <form id="cotizacionForm">
+            <label for="tipoMascota">Tipo de Mascota:</label>
+            <select id="tipoMascota">
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="tipoPlan">Plan:</label>
+            <select id="tipoPlan">
+                <option value="Dorado">Dorado</option>
+                <option value="Platino">Platino</option>
+            </select>
+
+            <label for="pesoAproximado">Peso Aproximado (kg):</label>
+            <input type="number" id="pesoAproximado" />
+
+            <button type="button" onclick="calcularCosto()">Calcular</button>
+            <div id="resultadoCotizacion">
+           
+           
+            </div>
+        </form>
+    </section>
+    <main>
+        <aside>
+            <h2>Te acompañamos en este difícil momento</h2>
+            <p>Entendemos tu duelo y somos conscientes de la importancia de entregar en cada proceso lo mejor de
+                nosotros haciéndolo con amor, empatía y respeto. Nuestro servicio es exclusivo, transparente y va
+                dirigido a aquellas personas que desean dar un destino final digno a su mejor amigo </p>
+        </aside>
+       
+        
+    </main>
+    <footer>
+        <p>Derechos de autor © 2023. Todos los derechos reservados</p>
+    </footer>
+    <section class="Cotizacion">
+       
+    </section>
+   
+    <script src="js/validacionServicio.js"></script>
+  
+</body>
+
+</html>
